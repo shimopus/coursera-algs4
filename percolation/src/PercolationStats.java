@@ -64,8 +64,8 @@ public class PercolationStats {
         }
         PercolationStats percolationStats = new PercolationStats(n, T);
 
-        StdOut.printf("mean                    = %1f \n", new Object[] {new Double(percolationStats.mean())});
-        StdOut.printf("stddev                  = %1f \n", new Object[] {new Double(percolationStats.stddev())});
+        StdOut.printf("mean                    = %1f \n", new Object[] {Double.valueOf(percolationStats.mean())});
+        StdOut.printf("stddev                  = %1f \n", new Object[] {Double.valueOf(percolationStats.stddev())});
         StdOut.print("95% confidence interval = [" +
                 (percolationStats.mean() - (1.96 * percolationStats.stddev() / Math.sqrt(T))) +
                 ", " +
