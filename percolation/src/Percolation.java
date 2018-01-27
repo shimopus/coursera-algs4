@@ -3,6 +3,7 @@ import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 public class Percolation {
     private boolean[][] map;
     private WeightedQuickUnionUF quickUnion;
+    private WeightedQuickUnionUF quickUnionNoVirtBottom;
     private int numberOfOpenedSites = 0;
     private int n;
     private int virtTopIndex;
@@ -13,6 +14,8 @@ public class Percolation {
         if (n < 1) throw new IllegalArgumentException("Wrong size of matrix");
 
         quickUnion = new WeightedQuickUnionUF(n * n + 2 /*virtual nodes 1-top, 2-bottom*/);
+        quickUnionNoVirtBottom = new WeightedQuickUnionUF(n * n + 1 /*virtual nodes 1-top*/);
+
         this.n = n;
         virtTopIndex = n * n;
         virtBottomIndex = n * n + 1;
@@ -24,6 +27,7 @@ public class Percolation {
                 col[i] = false;
                 if (row == 0) {
                     quickUnion.union(getIndexForQuickUnion(row, i), virtTopIndex);
+                    quickUnionNoVirtBottom.union(getIndexForQuickUnion(row, i), virtTopIndex);
                 }
                 if (row == n - 1) {
                     quickUnion.union(getIndexForQuickUnion(row, i), virtBottomIndex);
@@ -46,15 +50,19 @@ public class Percolation {
 
             if (col != 0 && map[col - 1][row]) {
                 quickUnion.union(getIndexForQuickUnion(row, col), getIndexForQuickUnion(row, col - 1));
+                quickUnionNoVirtBottom.union(getIndexForQuickUnion(row, col), getIndexForQuickUnion(row, col - 1));
             }
             if (col < n - 1 && map[col + 1][row]) {
                 quickUnion.union(getIndexForQuickUnion(row, col), getIndexForQuickUnion(row, col + 1));
+                quickUnionNoVirtBottom.union(getIndexForQuickUnion(row, col), getIndexForQuickUnion(row, col + 1));
             }
             if (row != 0 && map[col][row - 1]) {
                 quickUnion.union(getIndexForQuickUnion(row, col), getIndexForQuickUnion(row - 1, col));
+                quickUnionNoVirtBottom.union(getIndexForQuickUnion(row, col), getIndexForQuickUnion(row - 1, col));
             }
             if (row < n - 1 && map[col][row + 1]) {
                 quickUnion.union(getIndexForQuickUnion(row, col), getIndexForQuickUnion(row + 1, col));
+                quickUnionNoVirtBottom.union(getIndexForQuickUnion(row, col), getIndexForQuickUnion(row + 1, col));
             }
         }
 
@@ -74,8 +82,8 @@ public class Percolation {
         validateIndexes(col, row);
         row--;
         col--;
-        return isOpen(row + 1, col + 1) && quickUnion.connected(virtTopIndex, getIndexForQuickUnion(row, col));
 
+        return isOpen(row + 1, col + 1) && quickUnionNoVirtBottom.connected(virtTopIndex, getIndexForQuickUnion(row, col));
     }
 
     // number of open sites
