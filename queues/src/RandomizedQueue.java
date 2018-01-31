@@ -98,11 +98,6 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         queue.enqueue(3);
         queue.enqueue(4);
         queue.enqueue(5);
-        queue.enqueue(6);
-        queue.enqueue(7);
-        queue.enqueue(8);
-        queue.enqueue(9);
-        queue.enqueue(10);
         print(queue);
 
         System.out.println(queue.dequeue());
@@ -111,7 +106,14 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         print(queue);
         System.out.println(queue.dequeue());
         print(queue);
+        System.out.println(queue.dequeue());
+        print(queue);
+        System.out.println(queue.dequeue());
+        print(queue);
 
+
+        queue.enqueue(4);
+        queue.enqueue(5);
         System.out.println(queue.sample());
         print(queue);
         System.out.println(queue.sample());

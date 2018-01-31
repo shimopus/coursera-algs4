@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5056d1f0-463c-439f-a05e-31cab6374b93" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/queues/src/RandomizedQueue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/queues/queues.iml" beforeDir="false" afterPath="$PROJECT_DIR$/queues/queues.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/queues/src/RandomizedQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/queues/src/RandomizedQueue.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,8 +55,8 @@
       <file leaf-file-name="RandomizedQueue.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/queues/src/RandomizedQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1768">
-              <caret line="104" column="24" selection-start-line="104" selection-start-column="24" selection-end-line="104" selection-end-column="24" />
+            <state relative-caret-position="839">
+              <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#299#300#0" expanded="true" />
@@ -507,7 +506,7 @@
       <option name="presentableId" value="Default" />
       <updated>1517057960364</updated>
       <workItem from="1517057962398" duration="3970000" />
-      <workItem from="1517424148856" duration="8520000" />
+      <workItem from="1517424148856" duration="8770000" />
     </task>
     <task id="LOCAL-00001" summary="PercolationStat">
       <created>1517063236797</created>
@@ -523,11 +522,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517429416516</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="RandomizedQueue">
+      <created>1517434070394</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1517434070394</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12490000" />
+    <option name="totallyTimeSpent" value="12740000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -597,11 +603,12 @@
     <MESSAGE value="Percolation. Version 1" />
     <MESSAGE value="PercolationStat" />
     <MESSAGE value="Deque" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deque" />
+    <MESSAGE value="RandomizedQueue" />
+    <option name="LAST_COMMIT_MESSAGE" value="RandomizedQueue" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="20" />
+      <option name="time" value="21" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -758,8 +765,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/queues/src/RandomizedQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1768">
-          <caret line="104" column="24" selection-start-line="104" selection-start-column="24" selection-end-line="104" selection-end-column="24" />
+        <state relative-caret-position="839">
+          <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#299#300#0" expanded="true" />
