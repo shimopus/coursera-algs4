@@ -126,45 +126,26 @@ public class Deque<Item> implements Iterable<Item> {
         deque.addLast(2);
         deque.addLast(1);
 
-        print(deque);
+        deque.removeFirst();
 
         deque.removeFirst();
-        print(deque);
-
-        deque.removeFirst();
-        print(deque);
 
         deque.removeLast();
-        print(deque);
 
         deque.removeLast();
-        print(deque);
 
         deque.removeFirst();
-        print(deque);
 
         deque.addLast(0);
-        print(deque);
 
         deque.removeFirst();
-        print(deque);
 
         deque.addFirst(1);
-        print(deque);
 
         deque.removeLast();
-        print(deque);
     }
 
-    private static void print(Deque deque) {
-        for (Object item : deque) {
-            System.out.print(item + ", ");
-        }
-
-        System.out.println("\n__________");
-    }
-
-    class ItemNode {
+    private class ItemNode {
         private Item value;
         private ItemNode next;
         private ItemNode prev;
@@ -200,7 +181,7 @@ public class Deque<Item> implements Iterable<Item> {
         }
     }
 
-    class DequeIterator implements Iterator<Item> {
+    private class DequeIterator implements Iterator<Item> {
         private ItemNode current;
         private boolean isFirstTime = true;
 

@@ -81,14 +81,6 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         return new RandomizedQueueIterator();
     }
 
-    private static void print(RandomizedQueue queue) {
-        for (Object item : queue) {
-            System.out.print(item + ", ");
-        }
-
-        System.out.println("\n__________");
-    }
-
     // unit testing (optional)
     public static void main(String[] args) {
         RandomizedQueue<Integer> queue = new RandomizedQueue<>();
@@ -98,33 +90,23 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         queue.enqueue(3);
         queue.enqueue(4);
         queue.enqueue(5);
-        print(queue);
-
         System.out.println(queue.dequeue());
-        print(queue);
         System.out.println(queue.dequeue());
-        print(queue);
         System.out.println(queue.dequeue());
-        print(queue);
         System.out.println(queue.dequeue());
-        print(queue);
         System.out.println(queue.dequeue());
-        print(queue);
 
 
         queue.enqueue(4);
         queue.enqueue(5);
         System.out.println(queue.sample());
-        print(queue);
         System.out.println(queue.sample());
-        print(queue);
         System.out.println(queue.sample());
-        print(queue);
     }
 
-    class RandomizedQueueIterator implements Iterator<Item> {
-        private Item[] localQueue = (Item[]) new Object[size];
-        int current = 0;
+    private class RandomizedQueueIterator implements Iterator<Item> {
+        private final Item[] localQueue = (Item[]) new Object[size];
+        private int current = 0;
 
         public RandomizedQueueIterator() {
             System.arraycopy(queue, 0, localQueue, 0, size);
@@ -138,6 +120,9 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 
         @Override
         public Item next() {
+            if (current == size) {
+                throw new NoSuchElementException();
+            }
             return localQueue[current++];
         }
 

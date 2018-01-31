@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5056d1f0-463c-439f-a05e-31cab6374b93" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/queues/src/Permutation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/permutation/duplicates.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/queues/src/Deque.java" beforeDir="false" afterPath="$PROJECT_DIR$/queues/src/Deque.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/queues/src/RandomizedQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/queues/src/RandomizedQueue.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,8 +24,8 @@
       <file leaf-file-name="Deque.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/queues/src/Deque.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="158" column="4" selection-start-line="158" selection-start-column="4" selection-end-line="164" selection-end-column="5" />
+            <state relative-caret-position="457">
+              <caret line="145" selection-start-line="145" selection-end-line="145" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#291#292#0" expanded="true" />
@@ -31,18 +34,18 @@
                 <element signature="e#422#423#0" expanded="true" />
                 <element signature="e#2593#2594#0" expanded="true" />
                 <element signature="e#2639#2640#0" expanded="true" />
-                <element signature="e#1153#1154#0" expanded="true" />
-                <element signature="e#1189#1190#0" expanded="true" />
-                <element signature="e#1235#1236#0" expanded="true" />
-                <element signature="e#1277#1278#0" expanded="true" />
-                <element signature="e#1310#1311#0" expanded="true" />
-                <element signature="e#1345#1346#0" expanded="true" />
-                <element signature="e#1387#1388#0" expanded="true" />
-                <element signature="e#1427#1428#0" expanded="true" />
-                <element signature="e#1514#1515#0" expanded="true" />
-                <element signature="e#1549#1550#0" expanded="true" />
-                <element signature="e#1591#1592#0" expanded="true" />
-                <element signature="e#1631#1632#0" expanded="true" />
+                <element signature="e#3852#3853#0" expanded="true" />
+                <element signature="e#3888#3889#0" expanded="true" />
+                <element signature="e#3925#3926#0" expanded="true" />
+                <element signature="e#3967#3968#0" expanded="true" />
+                <element signature="e#3997#3998#0" expanded="true" />
+                <element signature="e#4032#4033#0" expanded="true" />
+                <element signature="e#4071#4072#0" expanded="true" />
+                <element signature="e#4111#4112#0" expanded="true" />
+                <element signature="e#4141#4142#0" expanded="true" />
+                <element signature="e#4176#4177#0" expanded="true" />
+                <element signature="e#4215#4216#0" expanded="true" />
+                <element signature="e#4255#4256#0" expanded="true" />
                 <element signature="e#3815#3816#0" expanded="true" />
                 <element signature="e#3858#3859#0" expanded="true" />
                 <element signature="e#4349#4350#0" expanded="true" />
@@ -55,8 +58,8 @@
       <file leaf-file-name="RandomizedQueue.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/queues/src/RandomizedQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="839">
-              <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
+            <state relative-caret-position="623">
+              <caret line="104" selection-start-line="104" selection-end-line="104" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#299#300#0" expanded="true" />
@@ -65,13 +68,29 @@
                 <element signature="e#449#450#0" expanded="true" />
                 <element signature="e#1779#1780#0" expanded="true" />
                 <element signature="e#1830#1831#0" expanded="true" />
-                <element signature="e#1691#1692#0" expanded="true" />
-                <element signature="e#1727#1728#0" expanded="true" />
-                <element signature="e#2363#2364#0" expanded="true" />
-                <element signature="e#2413#2414#0" expanded="true" />
-                <element signature="e#2154#2155#0" expanded="true" />
-                <element signature="e#2216#2217#0" expanded="true" />
+                <element signature="e#3297#3298#0" expanded="true" />
+                <element signature="e#3355#3356#0" expanded="true" />
+                <element signature="e#3505#3506#0" expanded="true" />
+                <element signature="e#3570#3571#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Permutation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/queues/src/Permutation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="duplicates.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/permutation/duplicates.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -107,8 +126,10 @@
         <option value="$PROJECT_DIR$/percolation/src/PercolationStats.java" />
         <option value="$PROJECT_DIR$/percolation/src/Percolation.java" />
         <option value="$PROJECT_DIR$/percolation/src/PercolationVisualizer.java" />
-        <option value="$PROJECT_DIR$/queues/src/Deque.java" />
+        <option value="$PROJECT_DIR$/tests/permutation/duplicates.txt" />
+        <option value="$PROJECT_DIR$/queues/src/Permutation.java" />
         <option value="$PROJECT_DIR$/queues/src/RandomizedQueue.java" />
+        <option value="$PROJECT_DIR$/queues/src/Deque.java" />
       </list>
     </option>
   </component>
@@ -153,6 +174,17 @@
               <item name="queues" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="coursera-algs4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="coursera-algs4" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coursera-algs4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="coursera-algs4" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="permutation" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -190,7 +222,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.RandomizedQueue">
+  <component name="RunManager" selected="Application.Permutation">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -204,16 +236,16 @@
       <module name="percolation" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="PercolationStats" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="PercolationStats" />
-      <module name="percolation" />
-      <option name="PROGRAM_PARAMETERS" value="200 100" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-    </configuration>
     <configuration name="PercolationVisualizer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="PercolationVisualizer" />
       <module name="percolation" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="Permutation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Permutation" />
+      <module name="queues" />
+      <option name="PROGRAM_PARAMETERS" value="8" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
     </configuration>
     <configuration name="RandomizedQueue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="RandomizedQueue" />
@@ -470,18 +502,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.PercolationVisualizer" />
-      <item itemvalue="Application.PercolationStats" />
       <item itemvalue="Application.Percolation" />
       <item itemvalue="Application.Deque" />
       <item itemvalue="Application.RandomizedQueue" />
+      <item itemvalue="Application.Permutation" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Permutation" />
         <item itemvalue="Application.RandomizedQueue" />
         <item itemvalue="Application.Deque" />
         <item itemvalue="Application.PercolationVisualizer" />
         <item itemvalue="Application.Percolation" />
-        <item itemvalue="Application.PercolationStats" />
       </list>
     </recent_temporary>
   </component>
@@ -506,7 +538,7 @@
       <option name="presentableId" value="Default" />
       <updated>1517057960364</updated>
       <workItem from="1517057962398" duration="3970000" />
-      <workItem from="1517424148856" duration="8770000" />
+      <workItem from="1517424148856" duration="11937000" />
     </task>
     <task id="LOCAL-00001" summary="PercolationStat">
       <created>1517063236797</created>
@@ -529,11 +561,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517434070394</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="RandomizedQueue">
+      <created>1517434312087</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1517434312087</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12740000" />
+    <option name="totallyTimeSpent" value="15907000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -608,7 +647,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="21" />
+      <option name="time" value="22" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -687,7 +726,6 @@
     <entry file="jar://$PROJECT_DIR$/lib/algs4.jar!/edu/princeton/cs/algs4/StdOut.java" />
     <entry file="jar://$PROJECT_DIR$/lib/algs4.jar!/edu/princeton/cs/algs4/StdStats.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/Random.java" />
-    <entry file="jar://$PROJECT_DIR$/lib/algs4.jar!/edu/princeton/cs/algs4/StdRandom.java" />
     <entry file="file://$PROJECT_DIR$/percolation/src/PercolationStats.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1139">
@@ -731,10 +769,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/algs4.jar!/edu/princeton/cs/algs4/StdIn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1405">
+          <caret line="226" column="35" lean-forward="true" selection-start-line="226" selection-start-column="35" selection-end-line="226" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/permutation/duplicates.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/queues/src/Permutation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/algs4.jar!/edu/princeton/cs/algs4/StdRandom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="504" column="23" selection-start-line="504" selection-start-column="23" selection-end-line="504" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/queues/src/Deque.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="158" column="4" selection-start-line="158" selection-start-column="4" selection-end-line="164" selection-end-column="5" />
+        <state relative-caret-position="457">
+          <caret line="145" selection-start-line="145" selection-end-line="145" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#291#292#0" expanded="true" />
@@ -743,18 +809,18 @@
             <element signature="e#422#423#0" expanded="true" />
             <element signature="e#2593#2594#0" expanded="true" />
             <element signature="e#2639#2640#0" expanded="true" />
-            <element signature="e#1153#1154#0" expanded="true" />
-            <element signature="e#1189#1190#0" expanded="true" />
-            <element signature="e#1235#1236#0" expanded="true" />
-            <element signature="e#1277#1278#0" expanded="true" />
-            <element signature="e#1310#1311#0" expanded="true" />
-            <element signature="e#1345#1346#0" expanded="true" />
-            <element signature="e#1387#1388#0" expanded="true" />
-            <element signature="e#1427#1428#0" expanded="true" />
-            <element signature="e#1514#1515#0" expanded="true" />
-            <element signature="e#1549#1550#0" expanded="true" />
-            <element signature="e#1591#1592#0" expanded="true" />
-            <element signature="e#1631#1632#0" expanded="true" />
+            <element signature="e#3852#3853#0" expanded="true" />
+            <element signature="e#3888#3889#0" expanded="true" />
+            <element signature="e#3925#3926#0" expanded="true" />
+            <element signature="e#3967#3968#0" expanded="true" />
+            <element signature="e#3997#3998#0" expanded="true" />
+            <element signature="e#4032#4033#0" expanded="true" />
+            <element signature="e#4071#4072#0" expanded="true" />
+            <element signature="e#4111#4112#0" expanded="true" />
+            <element signature="e#4141#4142#0" expanded="true" />
+            <element signature="e#4176#4177#0" expanded="true" />
+            <element signature="e#4215#4216#0" expanded="true" />
+            <element signature="e#4255#4256#0" expanded="true" />
             <element signature="e#3815#3816#0" expanded="true" />
             <element signature="e#3858#3859#0" expanded="true" />
             <element signature="e#4349#4350#0" expanded="true" />
@@ -765,8 +831,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/queues/src/RandomizedQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="839">
-          <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
+        <state relative-caret-position="623">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#299#300#0" expanded="true" />
@@ -775,12 +841,10 @@
             <element signature="e#449#450#0" expanded="true" />
             <element signature="e#1779#1780#0" expanded="true" />
             <element signature="e#1830#1831#0" expanded="true" />
-            <element signature="e#1691#1692#0" expanded="true" />
-            <element signature="e#1727#1728#0" expanded="true" />
-            <element signature="e#2363#2364#0" expanded="true" />
-            <element signature="e#2413#2414#0" expanded="true" />
-            <element signature="e#2154#2155#0" expanded="true" />
-            <element signature="e#2216#2217#0" expanded="true" />
+            <element signature="e#3297#3298#0" expanded="true" />
+            <element signature="e#3355#3356#0" expanded="true" />
+            <element signature="e#3505#3506#0" expanded="true" />
+            <element signature="e#3570#3571#0" expanded="true" />
           </folding>
         </state>
       </provider>
