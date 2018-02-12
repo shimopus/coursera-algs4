@@ -15,6 +15,8 @@ public class BruteCollinearPoints {
         }
 
         for (int i = 0; i < points.length; i++) {
+            if (points[i] == null) throw new IllegalArgumentException("some point in array is null");
+
             for (int j = 0; j < points.length; j++) {
                 for (int k = 0; k < points.length; k++) {
                     for (int l = 0; l < points.length; l++) {

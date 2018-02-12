@@ -10,8 +10,14 @@ public class FastCollinearPoints {
 
     // finds all line segments containing 4 or more points
     public FastCollinearPoints(Point[] points){
+        if (points == null) {
+            throw new IllegalArgumentException("points array is null");
+        }
+
         for (int i = 0; i < points.length; i++) {
             Point p = points[i];
+
+            if (p == null) throw new IllegalArgumentException("some point in array is null");
 
             Point[] slopes = new Point[points.length - 1];
             int k = 0;
@@ -45,7 +51,6 @@ public class FastCollinearPoints {
                 //do not add duplicates. Only sorted array should be added
                 boolean sorted = true;
                 for (int j = 0; j < segment.length-1; j++) {
-                    Point point = segment[j];
                     if (segment[j].compareTo(segment[j+1]) <= 0) {
                         sorted = false;
                     }
