@@ -56,9 +56,10 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
             resize(queue.length/2);
         }
 
-        StdRandom.shuffle(queue, 0, size);
+        int rand = StdRandom.uniform(size);
 
-        Item ret = queue[size - 1];
+        Item ret = queue[rand];
+        queue[rand] = queue[size-1];
         queue[size-1] = null;
         size--;
 
@@ -71,9 +72,9 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
             throw new NoSuchElementException();
         }
 
-        StdRandom.shuffle(queue, 0, size);
+        int rand = StdRandom.uniform(size);
 
-        return queue[size - 1];
+        return queue[rand];
     }
 
     // return an independent iterator over items in random order
@@ -90,18 +91,22 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         queue.enqueue(3);
         queue.enqueue(4);
         queue.enqueue(5);
-        System.out.println(queue.dequeue());
-        System.out.println(queue.dequeue());
-        System.out.println(queue.dequeue());
-        System.out.println(queue.dequeue());
-        System.out.println(queue.dequeue());
+        queue.enqueue(6);
+        queue.enqueue(7);
+        queue.enqueue(8);
+        queue.enqueue(9);
+        queue.enqueue(10);
 
-
-        queue.enqueue(4);
-        queue.enqueue(5);
-        System.out.println(queue.sample());
-        System.out.println(queue.sample());
-        System.out.println(queue.sample());
+        System.out.println(queue.dequeue());
+        System.out.println(queue.dequeue());
+        System.out.println(queue.dequeue());
+        System.out.println(queue.dequeue());
+        System.out.println(queue.dequeue());
+        System.out.println(queue.dequeue());
+        System.out.println(queue.dequeue());
+        System.out.println(queue.dequeue());
+        System.out.println(queue.dequeue());
+        System.out.println(queue.dequeue());
     }
 
     private class RandomizedQueueIterator implements Iterator<Item> {
