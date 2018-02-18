@@ -34,8 +34,8 @@ public class FastCollinearPoints {
             int segmentSize = 0;
             int segmentStart = -1;
 
-            for (int j = 0; j < slopes.length - 1; j++) {
-                if (p.slopeTo(slopes[j]) == p.slopeTo(slopes[j + 1])) {
+            for (int j = 0; j < slopes.length; j++) {
+                if (j < slopes.length-1 && p.slopeTo(slopes[j]) == p.slopeTo(slopes[j + 1])) {
                     segmentSize++;
                     if (segmentStart < 0) {
                         segmentStart = j;
