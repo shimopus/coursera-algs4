@@ -40,14 +40,16 @@ public class FastCollinearPoints {
                     if (segmentStart < 0) {
                         segmentStart = j;
                     }
+
+                    continue;
                 } else if (segmentSize >= 2) {
                     segmentSize++;
 
                     addSegment(slopes, p, segmentStart, segmentSize);
-
-                    segmentStart = -1;
-                    segmentSize = 0;
                 }
+
+                segmentStart = -1;
+                segmentSize = 0;
             }
         }
     }
