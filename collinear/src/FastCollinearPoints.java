@@ -24,6 +24,7 @@ public class FastCollinearPoints {
             for (int j = 0; j < points.length; j++) {
                 if (i != j) {
                     Point q = points[j];
+                    if (q == null) throw new IllegalArgumentException("some point in array is null");
                     slopes[k++] = q;
                 }
             }
@@ -40,7 +41,8 @@ public class FastCollinearPoints {
                     if (segmentStart < 0) {
                         segmentStart = j;
                     }
-                } else if (segmentSize > 0) {
+                } else if (segmentSize >= 2) {
+                    segmentSize++;
                     segment = Arrays.copyOfRange(slopes, segmentStart, segmentStart+segmentSize+1);
                     segment[segmentSize] = p;
                     break;
@@ -49,12 +51,14 @@ public class FastCollinearPoints {
 
             if (segment != null) {
                 //do not add duplicates. Only sorted array should be added
+                Arrays.sort(segment);
                 boolean sorted = true;
-                for (int j = 0; j < segment.length-1; j++) {
-                    if (segment[j].compareTo(segment[j+1]) <= 0) {
+                /*for (int j = 0; j < segment.length-1; j++) {
+                    if (segment[j].compareTo(segment[j+1]) > 0) {
                         sorted = false;
+                        break;
                     }
-                }
+                }*/
 
                 if (sorted) {
                     add(new LineSegment(segment[0], segment[segmentSize]));
@@ -75,10 +79,18 @@ public class FastCollinearPoints {
     }
 
     private void add(LineSegment lineSegment) {
-        lineSegments[linesCount++] = lineSegment;
+        boolean add = true;
+        for (LineSegment segment : lineSegments) {
+            if (segment != null && segment.toString().equals(lineSegment.toString())) {
+                add = false;
+            }
+        }
 
-        if (linesCount == lineSegments.length) {
-            resize(lineSegments.length*2);
+        if (add) {
+            lineSegments[linesCount++] = lineSegment;
+            if (linesCount == lineSegments.length) {
+                resize(lineSegments.length * 2);
+            }
         }
     }
 

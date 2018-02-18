@@ -122,7 +122,7 @@ public class Point implements Comparable<Point> {
         /* YOUR CODE HERE */
     }
 
-    private static class SlopeComparator implements Comparator<Point> {
+    private class SlopeComparator implements Comparator<Point> {
         private Point basePoint;
 
         public SlopeComparator(Point basePoint) {
