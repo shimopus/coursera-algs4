@@ -9,7 +9,7 @@ public class FastCollinearPoints {
     private int linesCount = 0;
 
     // finds all line segments containing 4 or more points
-    public FastCollinearPoints(Point[] points){
+    public FastCollinearPoints(Point[] points) {
         if (points == null) {
             throw new IllegalArgumentException("points array is null");
         }
@@ -31,39 +31,44 @@ public class FastCollinearPoints {
 
             Arrays.sort(slopes, p.slopeOrder());
 
-            Point[] segment = null;
             int segmentSize = 0;
             int segmentStart = -1;
 
-            for (int j = 0; j < slopes.length-1; j++) {
-                if (p.slopeTo(slopes[j]) == p.slopeTo(slopes[j+1])) {
+            for (int j = 0; j < slopes.length - 1; j++) {
+                if (p.slopeTo(slopes[j]) == p.slopeTo(slopes[j + 1])) {
                     segmentSize++;
                     if (segmentStart < 0) {
                         segmentStart = j;
                     }
                 } else if (segmentSize >= 2) {
                     segmentSize++;
-                    segment = Arrays.copyOfRange(slopes, segmentStart, segmentStart+segmentSize+1);
-                    segment[segmentSize] = p;
-                    break;
+
+                    addSegment(slopes, p, segmentStart, segmentSize);
+
+                    segmentStart = -1;
+                    segmentSize = 0;
                 }
             }
+        }
+    }
 
-            if (segment != null) {
-                //do not add duplicates. Only sorted array should be added
-                Arrays.sort(segment);
-                boolean sorted = true;
-                /*for (int j = 0; j < segment.length-1; j++) {
-                    if (segment[j].compareTo(segment[j+1]) > 0) {
-                        sorted = false;
-                        break;
-                    }
-                }*/
+    private void addSegment(Point[] slopes, Point p, int segmentStart, int segmentSize) {
+        Point[] segment = null;
+        segment = Arrays.copyOfRange(slopes, segmentStart, segmentStart + segmentSize + 1);
+        segment[segmentSize] = p;
+        //do not add duplicates. Only sorted array should be added
 
-                if (sorted) {
-                    add(new LineSegment(segment[0], segment[segmentSize]));
-                }
+        Arrays.sort(segment);
+        boolean sorted = true;
+        /*for (int j = 0; j < segment.length-1; j++) {
+            if (segment[j].compareTo(segment[j+1]) > 0) {
+                sorted = false;
+                break;
             }
+        }*/
+
+        if (sorted) {
+            add(new LineSegment(segment[0], segment[segmentSize]));
         }
     }
 
@@ -83,6 +88,7 @@ public class FastCollinearPoints {
         for (LineSegment segment : lineSegments) {
             if (segment != null && segment.toString().equals(lineSegment.toString())) {
                 add = false;
+                break;
             }
         }
 
@@ -94,8 +100,7 @@ public class FastCollinearPoints {
         }
     }
 
-    private void resize(int capacity)
-    {
+    private void resize(int capacity) {
         lineSegments = Arrays.copyOf(lineSegments, capacity);
     }
 
