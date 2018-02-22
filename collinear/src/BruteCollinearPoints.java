@@ -63,20 +63,19 @@ public class BruteCollinearPoints {
 
     // the line segments
     public LineSegment[] segments() {
-        resize(linesCount);
-        return lineSegments;
+        return resize(linesCount);
     }
 
     private void add(LineSegment lineSegment) {
         lineSegments[linesCount++] = lineSegment;
 
         if (linesCount == lineSegments.length) {
-            resize(lineSegments.length * 2);
+            lineSegments = resize(lineSegments.length * 2);
         }
     }
 
-    private void resize(int capacity) {
-        lineSegments = Arrays.copyOf(lineSegments, capacity);
+    private LineSegment[] resize(int capacity) {
+        return Arrays.copyOf(lineSegments, capacity);
     }
 
     public static void main(String[] args) {

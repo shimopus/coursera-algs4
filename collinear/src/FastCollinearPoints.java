@@ -2,10 +2,12 @@ import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdOut;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class FastCollinearPoints {
     private LineSegment[] lineSegments = new LineSegment[5];
+    private SegmentSlope[] lineSlopes = new SegmentSlope[5];
     private int linesCount = 0;
 
     // finds all line segments containing 4 or more points
@@ -70,7 +72,7 @@ public class FastCollinearPoints {
         }*/
 
         if (sorted) {
-            add(new LineSegment(segment[0], segment[segmentSize]));
+            add(segment[0], segment[segmentSize]);
         }
     }
 
@@ -81,29 +83,32 @@ public class FastCollinearPoints {
 
     // the line segments
     public LineSegment[] segments() {
-        resize(linesCount);
-        return lineSegments;
+        return resizeSegments(linesCount);
     }
 
-    private void add(LineSegment lineSegment) {
+    private void add(Point p1, Point p2) {
+        LineSegment lineSegment = new LineSegment(p1, p2);
+        double lineSlope = p1.slopeTo(p2);
         boolean add = true;
-        for (LineSegment segment : lineSegments) {
-            if (segment != null && segment.toString().equals(lineSegment.toString())) {
+        for (SegmentSlope slope : lineSlopes) {
+            if (slope != null && slope.slope == lineSlope && slope.p1.slopeTo(p1) == Double.NEGATIVE_INFINITY) {
                 add = false;
                 break;
             }
         }
 
         if (add) {
+            lineSlopes[linesCount] = new SegmentSlope(p1, lineSlope);
             lineSegments[linesCount++] = lineSegment;
             if (linesCount == lineSegments.length) {
-                resize(lineSegments.length * 2);
+                lineSegments = resizeSegments(lineSegments.length * 2);
             }
         }
     }
 
-    private void resize(int capacity) {
-        lineSegments = Arrays.copyOf(lineSegments, capacity);
+    private LineSegment[] resizeSegments(int capacity) {
+        lineSlopes = Arrays.copyOf(lineSlopes, capacity);
+        return Arrays.copyOf(lineSegments, capacity);
     }
 
     public static void main(String[] args) {
@@ -133,5 +138,15 @@ public class FastCollinearPoints {
             segment.draw();
         }
         StdDraw.show();
+    }
+
+    private class SegmentSlope {
+        Point p1;
+        double slope;
+
+        public SegmentSlope(Point p1, double slope) {
+            this.p1 = p1;
+            this.slope = slope;
+        }
     }
 }
