@@ -37,7 +37,7 @@ public class FastCollinearPoints {
             int segmentStart = -1;
 
             for (int j = 0; j < slopes.length; j++) {
-                if (j < slopes.length-1 && p.slopeTo(slopes[j]) == p.slopeTo(slopes[j + 1])) {
+                if (j < slopes.length - 1 && p.slopeTo(slopes[j]) == p.slopeTo(slopes[j + 1])) {
                     segmentSize++;
                     if (segmentStart < 0) {
                         segmentStart = j;
@@ -60,20 +60,8 @@ public class FastCollinearPoints {
         Point[] segment = null;
         segment = Arrays.copyOfRange(slopes, segmentStart, segmentStart + segmentSize + 1);
         segment[segmentSize] = p;
-        //do not add duplicates. Only sorted array should be added
-
         Arrays.sort(segment);
-        boolean sorted = true;
-        /*for (int j = 0; j < segment.length-1; j++) {
-            if (segment[j].compareTo(segment[j+1]) > 0) {
-                sorted = false;
-                break;
-            }
-        }*/
-
-        if (sorted) {
-            add(segment[0], segment[segmentSize]);
-        }
+        add(segment[0], segment[segmentSize]);
     }
 
     // the number of line segments
